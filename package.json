@@ -1,0 +1,13 @@
+{
+  "name": "imperium-jamb-cbt",
+  "version": "1.0.0",
+  "description": "Imperium Academy JAMB CBT Platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
