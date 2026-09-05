@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Imperium Academy | JAMB CBT</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #0b1b30;
+            border-bottom: 1px solid #c9a227;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .tagline {
+            font-size: 11px;
+            color: #ccc;
+            margin-top: 4px;
+        }
+
+        .status {
+            background: #12351f;
+            color: #6ee58a;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            color: #b9c3d0;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: #0c1d32;
+            border: 1px solid #1c3655;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #dce3ec;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #38516d;
+            background: #07111f;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #d4af37;
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .subject {
+            border: 1px solid #38516d;
+            background: #09182a;
+            padding: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .subject:hover {
+            border-color: #d4af37;
+        }
+
+        .subject input {
+            width: auto;
+            margin: 0 8px 0 0;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background: #09182a;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .info-box strong {
+            display: block;
+            font-size: 22px;
+            color: #d4af37;
+            margin-bottom: 5px;
+        }
+
+        .info-box span {
+            font-size: 12px;
+            color: #aeb9c7;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 10px;
+            background: #d4af37;
+            color: #07111f;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e5c451;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            color: #ff7676;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #78879a;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <div class="logo">IMPERIUM ACADEMY</div>
+        <div class="tagline">Forged for Excellence</div>
+    </div>
+
+    <div class="status">CBT ONLINE</div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>JAMB <span>CBT PLATFORM</span></h1>
+
+        <p>
+            Welcome to the Imperium Academy JAMB Computer Based Test platform.
+            Prepare, practise and measure your performance.
+        </p>
+    </section>
+
+    <section class="card">
+
+        <h2>Candidate Information</h2>
+
+        <label for="candidateName">Full Name</label>
+
+        <input
+            type="text"
+            id="candidateName"
+            placeholder="Enter your full name"
+        >
+
+        <label for="candidateId">Candidate ID</label>
+
+        <input
+            type="text"
+            id="candidateId"
+            placeholder="Enter your candidate ID"
+        >
+
+    </section>
+
+    <section class="card">
+
+        <h2>Select Your Subjects</h2>
+
+        <p style="color:#aeb9c7; margin-bottom:18px;">
+            Select exactly four subjects.
+        </p>
+
+        <div class="subjects">
+
+            <label class="subject">
+                <input type="checkbox" value="English Language">
+                English Language
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Mathematics">
+                Mathematics
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Physics">
+                Physics
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Chemistry">
+                Chemistry
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Biology">
+                Biology
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Economics">
+                Economics
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Government">
+                Government
+            </label>
+
+            <label class="subject">
+                <input type="checkbox" value="Literature">
+                Literature
+            </label>
+
+        </div>
+
+        <div class="info">
+
+            <div class="info-box">
+                <strong>180</strong>
+                <span>Questions</span>
+            </div>
+
+            <div class="info-box">
+                <strong>120</strong>
+                <span>Minutes</span>
+            </div>
+
+            <div class="info-box">
+                <strong>45</strong>
+                <span>Per Subject</span>
+            </div>
+
+        </div>
+
+        <button onclick="startExam()">
+            START JAMB CBT
+        </button>
+
+        <div id="message"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Imperium Academy — Forged for Excellence
+</footer>
+
+<script>
+
+function startExam() {
+
+    const name = document.getElementById("candidateName").value.trim();
+    const id = document.getElementById("candidateId").value.trim();
+
+    const selected = document.querySelectorAll(
+        '.subject input:checked'
+    );
+
+    const message = document.getElementById("message");
+
+    if (!name) {
+        message.textContent = "Please enter your full name.";
+        return;
+    }
+
+    if (!id) {
+        message.textContent = "Please enter your Candidate ID.";
+        return;
+    }
+
+    if (selected.length !== 4) {
+        message.textContent = "Please select exactly four subjects.";
+        return;
+    }
+
+    const subjects = Array.from(selected).map(
+        checkbox => checkbox.value
+    );
+
+    localStorage.setItem("candidateName", name);
+    localStorage.setItem("candidateId", id);
+    localStorage.setItem(
+        "selectedSubjects",
+        JSON.stringify(subjects)
+    );
+
+    alert(
+        "Candidate verified!\\n\\n" +
+        "Welcome, " + name + ".\\n\\n" +
+        "Your CBT engine will be connected in the next phase."
+    );
+}
+
+</script>
+
+</body>
+</html>
